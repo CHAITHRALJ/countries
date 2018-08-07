@@ -1,21 +1,15 @@
-import json,requests
+import json,requests  # importing the packages
 
-def getData():
-    url="https://restcountries.eu/rest/v2/all?fields=name;topLevelDomain"
-    header = {'content-type': 'application/json'}
-    r = requests.get(url).text
-    data = json.loads(r)
-    count = 0
-    for i in data:
-        print("country name:")
-        print(data[count]['name'])
-        print("Top level Domain:")
-        count1 = 0
-        for j in data[count]['topLevelDomain']:
-            print(data[count]['topLevelDomain'][count1])
-            count1 = count1 + 1
-        count = count + 1
-        print("\n")
-        
-getData()
+def getData():  # fuction to get the data
+  url = "https://restcountries.eu/rest/v2/all?fields=name;topLevelDomain"  # url which is containaing the information
+  header = {'content-type': 'application/json'}  # the data which is in JSON format
+  r = requests.get(url).text  # convert the json data to text format
+  data = json.loads(r)  # load that data to a variable
+  for country in data:   # for all the countries in data
+    for tld in country['topLevelDomain']: # prints  all the toplevel domain of the country
+      print(country['name'], end='')
+      print (',',tld)
+    print("\n")
+getData()   # returning the required output
+
 
