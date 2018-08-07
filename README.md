@@ -14,7 +14,7 @@ def getData():
   # convert the json data to text format
   r = requests.get(url).text 
   
-   # load that data to a vriable
+   # load that data to a variable
   data = json.loads(r)
   
   # for all the countries in data
