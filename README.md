@@ -4,7 +4,7 @@
 pip install json
 
 #usage
-open command prompt and go to python and run the code by using python filename.py
+open command prompt, go to python and run the code by using python filename.py
 
 # importing the packages
 
