@@ -1,3 +1,11 @@
+# This code will list all world countries with their TLD (top level domain).
+
+# installation
+pip install json
+
+#usage
+open command prompt and go to python and run the code by using python filename.py
+
 # importing the packages
 
 import json,requests 
