@@ -6,10 +6,10 @@ def getData():  # fuction to get the data
   r = requests.get(url).text  # convert the json data to text format
   data = json.loads(r)  # loads the data to a variable
   for country in data:   # for all the countries in data
+    string= country['name'] + ':' # assign to a variable called string
     for tld in country['topLevelDomain']: # for all toplevel domain of the country
-      print(country['name'], end='') # prints the country name 
-      print (',',tld)  # prints the all TLD's of the country
-    print("\n")
+      string+= tld + ''  # cantenating string with tld 
+    print(string+ "\n")  #prints the list of domains in each country
 getData()   # returning the required output
 
 
