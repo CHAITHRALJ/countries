@@ -28,12 +28,15 @@ def getData():
   # for all the countries in data
   for country in data:   
   
- # prints the all toplevel domain of the country
-   
+  # assign a country name to a variable called string 
+  string= country['name'] + ': '
+  
+  # for all tld in each countries 
    for tld in country['topLevelDomain']: 
-      print(country['name'], end='')
-      print (',',tld)
-      print("\n")
+   
+   #cancatenating country name with tld
+      string+= tld + ' '
+      print( string"\n")
       
 # returning the required output
 getData() 
