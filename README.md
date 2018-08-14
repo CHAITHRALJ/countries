@@ -34,9 +34,9 @@ def getData():
   # for all tld in each countries 
    for tld in country['topLevelDomain']: 
    
-   #cancatenating country name with tld
-      string+= tld + ' '
-      print( string"\n")
+   #cancatenating country name with tld and prints all the tld 
+      string+= tld + ','
+      print( string[0:-1]+"\n")
       
 # returning the required output
 getData() 
