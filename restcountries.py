@@ -6,7 +6,6 @@ def getData():  # fuction to get the data
   r = requests.get(url).text  # convert the json data to text format
   data = json.loads(r)  # loads the data to a variable
   for country in data:   # for all the countries in data
-    for country in data:
       print("{0}:{1}".format(country['name'],' '.join(country['topLevelDomain'])))        
 getData()   # returning the required output
 
