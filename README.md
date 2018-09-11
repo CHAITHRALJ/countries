@@ -26,17 +26,10 @@ def getData():
   data = json.loads(r)
   
   # for all the countries in data
-  for country in data:   
+  for country in data:  
   
-  # assign a country name to a variable called string 
-  string= country['name'] + ': '
-  
-  # for all tld in each countries 
-   for tld in country['topLevelDomain']: 
-   
-   #cancatenating country name with tld and prints all the tld 
-      string+= tld + ','
-      print( string[0:-1]+"\n")
+  #printing all the tld for each country 
+  print("{0}:{1}".format(country['name'],' '.join(country['topLevelDomain'])))
       
 # returning the required output
 getData() 
